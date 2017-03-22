@@ -1,0 +1,47 @@
+body {background-color:white; font-family: sans-serif;}
+span {color: maroon; display:inline-block; padding:5px;}
+
+.ng-enter {
+  -webkit-transition: 1s;
+  transition: 1s;
+  
+  margin-left: 100%;
+}
+
+.ng-enter-active {
+  margin-left: 0;
+}
+
+#chat_container{
+	width: 65%;
+	display: inline-block;
+	margin-right: 15px;
+	float: left; 
+}
+#chat_window{
+	height:200px;
+	overflow: auto;
+}
+#book{
+	width: 30%;
+	display: inline-block;
+	padding:14px;
+	height:249px; 
+	overflow: auto;
+	background: #fff;
+}
+.input-group{
+	width: 100%
+}
+span#enter{
+	float: left;
+}
+input#enter{
+	width: 80%;
+}
+.btn-success{
+	margin-top: -6px
+}
+.jumbotron{
+	min-height: 220px;
+}

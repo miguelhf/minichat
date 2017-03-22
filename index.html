@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="chat.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="./chat.js"></script>	
+	</head>
+
+	<body>
+	    <div class="container">
+			<!-- Main component for a primary marketing message or call to action -->
+			<div class="jumbotron" ng-app="chat" ng-controller="chat_manager">
+					<p>{{header()}}</p>
+					<div id="chat_container">
+						<div id="enter" class="col-md-12">
+							<div class="input-group">
+								<form id="enter" ng-submit="submit_text()">
+									<span id="enter">{{prompt()}}</span>
+									<input  type="text" class="form-control" id="enter" method="post" autocomplete="off" ng-model="entry"></input>
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="button" ng-show="logged" ng-click="check_out()">X</button>
+									</span>
+								</form>
+							</div>
+						</div>
+						<textarea id="chat_window" ng-show="logged"  class="form-control" rows="3"></textarea>
+						<!--	<div ng-repeat="interventions in chat">{{interventions}}</div> 		-->
+					</div>
+					<div id="book" ng-show="logged">
+						<p ng-repeat="users in book_names">{{users}}</p>
+					</div>
+				
+			</div>
+	    </div> <!-- /container -->
+	</body>
+</html>
